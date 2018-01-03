@@ -16,18 +16,21 @@ class Cart extends Component {
 
     const msg = <Msg>请添加商品</Msg>
     return (
-      <div>
+      <Wrap>
         <Total>{total}元</Total>
         {
           hasProduct ? allProducts : msg
         }
-      </div>
+      </Wrap>
     )
   }
 }
 
 export default Cart
 
+const Wrap = styled.div`
+  padding: 20px;
+`
 const Total = styled.div`
   margin: 20px auto;
   width: 150px;
