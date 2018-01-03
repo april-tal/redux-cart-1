@@ -11,17 +11,19 @@ class Products extends Component {
     const { products } = store.getState()
     console.log(store.getState())
     const productList = products.map(t => (
-      <div key={t.id}>
+      <ProductWrap key={t.id}>
         <div>
           {t.name}
         </div>
         <Button onClick={() => this.handleClick(t.id)} >购买</Button>
-      </div>)
+      </ProductWrap>)
     )
     return (
       <Wrap>
-        <h2> 所有商品 </h2>
-        {productList}
+        <Title> 所有商品 </Title>
+        <ProductList>
+          {productList}
+        </ProductList>
       </Wrap>
     )
   }
@@ -31,6 +33,25 @@ export default Products
 
 const Wrap =  styled.div`
   background: #00bcd4;
+`
+
+const Title = styled.div`
+  padding: 40px;
+  text-align: center;
+  color: white;
+`
+
+const ProductList = styled.div`
+  display: flex;
+  border: 2px solid red;
+  justify-content: space-around;
+`
+
+const ProductWrap = styled.div`
+  border: 2px solid green;
+  background: white;
+  padding: 40px;
+  min-height: 150px;
 `
 
 const Button = styled.button`
