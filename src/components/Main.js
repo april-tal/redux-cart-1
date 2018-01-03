@@ -17,7 +17,7 @@ class Main extends Component {
 export default Main
 
 const Wrap = styled.div`
-  max-width: 420px;
+  max-width: 431px;
   height: 750px;
   margin: 0 auto;
   border: 20px solid #212121;
