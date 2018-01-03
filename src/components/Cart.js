@@ -75,6 +75,6 @@ const Quantity = styled.div`
   text-align: center;
   font-size: 13px;
   border-radius: 50%;
-  background: #00bcd4;
+  background: #FF5722;
   color: white;
 `

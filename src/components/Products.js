@@ -12,15 +12,15 @@ class Products extends Component {
     console.log(store.getState())
     const productList = products.map(t => (
       <ProductWrap key={t.id}>
-        <h3>
+        <h2>
           {t.name}
-        </h3>
+        </h2>
         <Button onClick={() => this.handleClick(t.id)} >购买</Button>
       </ProductWrap>)
     )
     return (
       <Wrap>
-        <Title> 所有商品 </Title>
+        <Title> Redux 购物车 </Title>
         <ProductList>
           {productList}
         </ProductList>
@@ -55,9 +55,10 @@ const ProductWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  h3 {
+  h2 {
     color: #212121;
     text-align: center;
+    font-size: 20px;
   }
 `
 
