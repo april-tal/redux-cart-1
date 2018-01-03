@@ -33,8 +33,6 @@ export default Products
 
 const Wrap =  styled.div`
   background: #00bcd4;
-  max-width: 400px;
-  margin: 0 auto;
 `
 
 const Title = styled.div`
