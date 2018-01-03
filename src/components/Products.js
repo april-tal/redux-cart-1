@@ -12,9 +12,9 @@ class Products extends Component {
     console.log(store.getState())
     const productList = products.map(t => (
       <ProductWrap key={t.id}>
-        <div>
+        <h3>
           {t.name}
-        </div>
+        </h3>
         <Button onClick={() => this.handleClick(t.id)} >购买</Button>
       </ProductWrap>)
     )
@@ -33,6 +33,8 @@ export default Products
 
 const Wrap =  styled.div`
   background: #00bcd4;
+  max-width: 400px;
+  margin: 0 auto;
 `
 
 const Title = styled.div`
@@ -43,15 +45,22 @@ const Title = styled.div`
 
 const ProductList = styled.div`
   display: flex;
-  border: 2px solid red;
   justify-content: space-around;
+  padding: 20px;
 `
 
 const ProductWrap = styled.div`
-  border: 2px solid green;
   background: white;
-  padding: 40px;
+  padding: 10px 20px 30px;
+  border-radius: 5px;
   min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h3 {
+    color: #212121;
+    text-align: center;
+  }
 `
 
 const Button = styled.button`
@@ -62,4 +71,12 @@ const Button = styled.button`
   line-height: 2;
   padding: 3px 30px;
   border: 0;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  &:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  }
+  &:focus {
+    outline: 0;
+  }
 `
